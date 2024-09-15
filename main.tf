@@ -38,8 +38,11 @@ module "hello" {
   source  = "joatmon08/hello/random"
   version = "6.0.0"
 
-  hello        = "World"
-  second_hello = random_pet.instance.id
+  hellos = {
+    hello        = random_pet.instance.id
+    second_hello = "World"
+  }
 
-  secret_key = "secret"
+  some_key = "secret"
 }
+
